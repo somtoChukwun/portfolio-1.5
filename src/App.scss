@@ -1,0 +1,150 @@
+$primary-color: #ff0000;
+$transp-white: rgba(255, 255, 255, 0.1);
+$hover-icons: #ff0000;
+$white-text: rgba(255, 255, 255, 0.8);
+$light-text: #fff;
+$dark-text: #000;
+
+$small-icons: 25px;
+$desktop-icons: 40px;
+
+$small-font: 14px;
+$button-font: 16px;
+$medium-font: 20px;
+$desktop-text: 18px; 
+$tablet-text: $desktop-text / 1.2;
+$mobile-text: $desktop-text / 1.6;
+
+
+$h-one-font: 15em;
+$h-two-font: 65px;
+$tablet-h-two-font: $h-two-font / 1.2;
+$mobile-h-two-font: $h-two-font / 2.24;
+$h-three-font: 50px;
+$tablet-h-three-font: $h-three-font / 1.4;
+$mobile-h-three-font: $h-three-font / 2.2;
+$h-four-font: 20px;
+$tablet-h-four-font: $h-four-font / 1.2;
+$mobile-h-four-font: $h-four-font / 1.6;
+
+
+$transparent-bg: rgba(0,0,0,0.2);
+$selection-color: rgba(88, 88, 88, 0.877);
+$cube-white: #fff;
+
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 981px;
+
+$flat-button-bg: rgb(230, 230, 230);
+$bg_white: #2b2b2bd0;
+$bg-black: #101010;
+$flat-button-shadow: rgba(110, 110, 110, 0.466);
+$flat-button-text: #000;
+$flat-button-text-hover: #fff;
+
+$first-color-au: rgba(255,0,0,0.9);
+$second-first-au: rgba(255,0,0,0);
+
+$second-color-au: rgba(226, 226, 226, 0.8);
+$second-second-au: rgba(0,255,0,0);
+
+$third-color-au: rgba(185, 185, 185, 0.7);
+$second-third-au: rgba(255, 255, 255, 0);
+
+//hero background
+$bg-one: $transp-white;
+$bg-two: $flat-button-shadow;
+$bg-three: transparent;
+
+@import 'animate.css';
+@import '~loaders.css/src/animations/pacman.scss';
+@import '~loaders.css/src/animations/square-spin.scss';
+@import './components/Layout/LoaderSquare.scss';
+
+@font-face{
+  font-family: 'Helvetica Neue';
+  src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
+}
+
+@font-face{
+  font-family: 'Futura';
+  src: url('./assets/fonts/futura.woff2') format('woff2');
+}
+
+@font-face{
+  font-family: 'La Belle Aurore';
+  src: url('./assets/fonts/LaBelleAurore.woff2') format('woff2');
+}
+
+@font-face{
+  font-family: 'Coolvetica';
+  src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
+}
+
+@font-face{
+  font-family: 'Telegraf';
+  src: url('./assets/fonts/PPTelegraf-Regular.otf') format('otf');
+}
+
+@font-face{
+  font-family: 'Orbitron';
+  src: url('./assets/fonts/orbitron-bold-webfont.woff') format('woff');
+}
+
+input,
+textarea{
+  // font-family: 'Helvetica Neue';
+}
+
+
+.App .MuiButton-contained, .swal-button {
+  color: $flat-button-text;
+  background-color: $flat-button-bg;
+  backdrop-filter: blur(6px);
+  border-radius: 30px;
+  box-shadow: -5px -5px 20px $bg_white,  5px 5px 20px $flat-button-shadow;
+  border: 0;
+  outline: 0;
+  padding: 10px 30px;
+  font-weight: 800;
+  transition: all 0.5s ease-in-out;
+  
+}
+.App .MuiButton-contained:hover, .swal-button:hover{
+  transition: all 0.3s ease-in-out;
+  color: $flat-button-text-hover;
+  background: linear-gradient(217deg, $first-color-au,  $second-first-au 70.71%),
+            linear-gradient(127deg, $second-color-au, $second-second-au 70.71%),
+            linear-gradient(336deg, $third-color-au, $second-third-au 70.71%);
+  opacity: 0.8;
+  backdrop-filter: blur(6px);
+  box-shadow: -2px -2px 5px $bg_white, 2px 2px 5px $flat-button-shadow;
+  
+}
+
+.flat-button.MuiButton-contained{
+  color: $dark-text;
+  font-size: $button-font;
+  animation: fadeIn 1s 1.2s backwards;
+  
+}
+
+
+::selection {
+  color: #fff;
+  background: $selection-color;
+}
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+.pages-overlay{
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  background-color: $flat-button-bg;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

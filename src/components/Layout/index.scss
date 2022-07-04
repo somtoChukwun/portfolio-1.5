@@ -1,0 +1,54 @@
+@import '../../App.scss';
+@import '../../index.scss';
+// $transp-white: rgba(255, 255, 255, 0.1);
+
+h1{
+    font-family: 'Orbitron';
+    font-size: 15em;
+    text-align: right;
+}
+
+.App{
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.layout-bg{
+    width: 100%;
+    
+    
+}
+
+
+
+.top-tags {
+    bottom: auto;
+    top: 35px;
+
+}
+
+.tags {
+    color: $primary-color;
+    opacity: 0.6;
+    
+    bottom: 0;
+    left: 12;
+    font-size: $small-font;
+}
+
+.container {
+    width: 100%;
+    will-change: contents;
+    height: 90%;
+    min-height: 60vh;
+    
+    opacity: 0;
+    
+    margin: 0 auto;
+    z-index: 1;
+    transform-style: preserve-3d;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.3s;
+    
+
+}

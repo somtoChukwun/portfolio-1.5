@@ -1,0 +1,30 @@
+@import '../../../App.scss';
+@import '../../../index.scss';
+
+
+.logo-container {
+    z-index: 0;
+    bottom: 0;
+    position: relative;
+    // min-width: 100px;
+    left: 0;
+    
+    
+    
+   svg{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+   }
+
+   .solid-logo{
+       opacity:0;
+       z-index: 1;
+       
+   }
+}
+
+.svg-container{
+    
+}

@@ -1,0 +1,11 @@
+.split-span{
+
+    display: inline-block;
+    .split-letters{
+        opacity: 0;
+        animation: flash 1s 1s;
+        animation-fill-mode: forwards;
+        min-width: 10px;
+        display: inline-block;
+    }
+}

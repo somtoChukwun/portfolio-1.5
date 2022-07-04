@@ -1,0 +1,61 @@
+@import '../../App.scss';
+@import '../../index.scss';
+
+
+body, *{
+    cursor: none;
+}
+.cursor-wrapper{
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 99999;
+}
+
+.shapes{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: 1px solid $light-text;
+    overflow: hidden;
+    border-radius: 50%; 
+    will-change: transform;
+    user-select: none;
+    pointer-events: none;
+    
+}
+
+.shape{
+    will-change: transform;
+    position: relative;
+    border-radius: 50%;
+
+    $shapes: (
+    rgba(255, 0, 0, 0): 650px, 
+    rgba(255, 255, 255, 0.041): 440px, 
+    rgba(196, 196, 196, 0.021): 270px);
+
+
+@each $color, $size in $shapes {
+    &.shape-#{index($shapes, ($color $size))} {
+        background: $color;
+        width: $size;
+        height: $size;
+        margin: (-$size/2) 0 0 (-$size/2);
+    }
+}
+}
+.cursor{
+    position: fixed;
+    background-color: $light-text;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border-radius: 50%;
+    will-change: transform;
+    user-select: none;
+    pointer-events: none;
+    z-index: 900000;
+    
+}

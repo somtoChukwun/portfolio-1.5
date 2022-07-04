@@ -1,0 +1,204 @@
+@import './App.scss';
+
+html{
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  font-family: 'Orbitron';
+  font-size: 11px/1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #444;
+  background: $bg-black;
+  display: block;
+  overflow: hidden;
+  overflow-y: overlay;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+
+  ::-webkit-scrollbar {
+    background-color: transparent;
+    width: 7px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient($primary-color 0, $primary-color 100%);
+    border: $transparent-bg;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px $primary-color;
+  }
+  
+  ::-webkit-scrollbar-track {
+    -webkit-backdrop-filter: blur(6px)!important;
+    backdrop-filter: blur(6px)!important;
+    background: transparent;
+    display: none;
+    max-width: 5px;
+  }
+  .contact-page .container .column-two .map-container-box{
+    width: 100%;
+    min-width: 45vw;
+  }
+
+  h2{
+    font-size: $h-two-font;
+  }
+  h3{
+    font-size: $h-three-font;
+  }
+  
+  .hero-content{
+    h2{
+      margin: 5px 0;
+      line-height: $h-two-font + 2px;
+      word-spacing: 0.12em;
+    }
+  }
+  .wrap-logo .logo-container{
+    width: $h-two-font * 1.4;
+    height: $h-two-font * 1.4; 
+   }
+
+.page-inner .container p, 
+.MuiFormControl-root .MuiInputLabel-animated, 
+.MuiFormControl-root .MuiInputBase-input, h4{
+    font-size: $desktop-text;
+}
+
+
+//media queries
+
+//media queries for sizing
+@media (max-width: $breakpoint-desktop) {
+  .container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &.hero-content{
+      justify-content: center;
+    }
+    &.hero-content .column-two{
+      flex: 0.5;
+    }
+    .text-zone{
+      flex: 0.5;
+    }
+  }
+  .contact-page .container .column-two .map-container-box{
+    width: 90%;
+      min-width: 70vw;
+  }
+  .contact-page .container .map-wrap .leaflet-container{
+    min-width: 50vw;
+  }
+  .contact-page .container .column-two{
+    padding-left:0;
+  }
+  .page {
+    .page-inner{
+      .row{
+        display: block;
+
+      }
+    }
+  }
+}
+  @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop){
+    .contact-page .container .column-two .map-container-box{
+      width: 100%;
+      min-width: 80vw;
+    }
+  }
+  
+//media queries for text responsiveness
+@media (max-width: $breakpoint-tablet) {
+  ::-webkit-scrollbar {
+    display:none;
+  }
+  h2{
+    font-size: $mobile-h-two-font;
+  }
+  h3{
+    font-size: $mobile-h-three-font;
+  }
+  .wrap-logo .logo-container{
+    width: $mobile-h-two-font * 1.4;
+    height: $mobile-h-two-font * 1.4; 
+   }
+
+  .hero-content{
+    h2{
+      margin: 5px 0;
+      line-height: $mobile-h-two-font + 2px;
+      word-spacing: calc(0.12em * 0.9);
+    }
+  }
+  nav a .nav-tooltip, 
+  .MuiFormControl-root .MuiInputLabel-animated, 
+  .MuiFormControl-root .MuiInputBase-input,
+  .hero-content .text-zone .heading-subtitle,
+  .view-tags .tags, 
+  .page-inner .container p, h4{
+    font-size: $mobile-text;
+  }
+
+.container{
+  &.hero-content .column-two{
+    display: none;
+  }
+}
+.page .page-inner .container .row{
+  flex-direction: column;
+}
+
+}
+
+
+
+
+@media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop){
+  h2{
+    font-size: $tablet-h-two-font;
+  }
+  h3{
+    font-size: $tablet-h-three-font;
+  }
+  .wrap-logo .logo-container{
+   width: $tablet-h-two-font * 1.4;
+   height: $tablet-h-two-font * 1.4; 
+  }
+ 
+  .hero-content{
+    h2{
+      margin: 5px 0;
+      line-height: $tablet-h-two-font + 2px;
+      word-spacing: calc(0.12em * 0.8);
+    }
+  }
+
+  .hero-content .text-zone .heading-subtitle,
+  nav a .nav-tooltip, 
+  .MuiFormControl-root .MuiInputLabel-animated, 
+  .MuiFormControl-root .MuiInputBase-input,
+  .view-tags .tags,
+  .page-inner .container p, h4{
+    font-size: $tablet-text;
+  }
+  
+}
+
+@media (min-width: $breakpoint-desktop) {
+.nav-bar .nav-icons{
+  font-size: $desktop-icons;
+}
+
+}

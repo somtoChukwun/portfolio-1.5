@@ -1,0 +1,27 @@
+@import '../../App.scss';
+@import '../../index.scss';
+
+.text-animate{
+    opacity: 0;
+    animation: flash 1s 0.5s;
+    animation-fill-mode: forwards;
+    min-width: 10px;
+    display: inline-block;
+
+}
+.text-animate-hover{
+    min-width: 10px;
+    display: inline-block;
+    animation-fill-mode: both;
+    &:hover {
+        animation: bounce 0.7s;
+        color: $primary-color;
+        animation-delay: 0s;
+    }
+}
+
+@for $i from 1 through 35 {
+    .text-animate._#{$i} {
+        animation-delay: #{$i /10}s;
+    }
+}

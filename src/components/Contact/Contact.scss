@@ -1,0 +1,217 @@
+@import '../../App.scss';
+@import '../../index.scss';
+
+
+.contact-form-control.MuiFormControl-root {
+    margin-right: 5px;
+    width: 100%;
+    opacity: 0;
+    animation: fadeInUp 1s 1.2s forwards;
+
+.MuiInputLabel-animated{
+font-family: 'Orbitron';
+color: $white-text;
+opacity: 0.4;
+}
+.MuiInputBase-input{
+    font-family: 'Orbitron';
+    color: $white-text;
+}
+.MuiFormLabel-root.Mui-focused{
+    color: $primary-color;
+}
+.MuiInput-underline:before{
+    border-bottom: 1px solid $light-text;
+}
+.MuiInput-underline:after{
+    border-bottom: 2px solid $primary-color;
+}
+.MuiInput-underline.Mui-error:after{
+    border-bottom: yellow;
+}
+}
+
+.name-and-subject {
+    display: flex;
+    .contact-form-control.MuiFormControl-root {
+    width: 48%;
+    opacity: 0;
+    animation: fadeInUp 1s 1s forwards;
+
+}
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    button.flat-button.MuiButton-contained{
+        margin-top: 20px;
+    }
+}
+
+.contact-page{
+    z-index: 10;
+    position: relative;
+    // background-color: $bg-black;
+
+    .container{
+        .column-two{
+            align-items: flex-start;
+            flex-direction: column;
+            padding-left: 20px;
+
+            .map-container-box{
+                min-height: 40vh;
+                margin-top: 40px;
+                position: relative;
+                
+            }
+            .info-map{
+                
+                opacity: 0;
+                animation: fadeIn 1s 1.1s forwards;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                max-width: 300px;
+                margin: auto;
+                
+
+                color: $flat-button-text;
+                background-color: $flat-button-bg;
+                backdrop-filter: blur(6px);
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+                box-shadow: -5px -5px 20px $bg_white,  5px 5px 20px $flat-button-shadow;
+                border: 0;
+                outline: 0;
+                padding: 10px 30px;
+                transition: all 1s ease-in-out;
+                font-weight: 800;
+                p{
+                    color: $flat-button-text;
+                    transition: all 1.2s ease-in-out;
+                }
+            }
+            .info-map:hover{
+                color: $flat-button-text-hover;
+                background: linear-gradient(217deg, $first-color-au,  $second-first-au 70.71%),
+                            linear-gradient(127deg, $second-color-au, $second-second-au 70.71%),
+                            linear-gradient(336deg, $third-color-au, $second-third-au 70.71%);
+                opacity: 0.8;
+                backdrop-filter: blur(6px);
+                box-shadow: -2px -2px 5px $bg_white, 2px 2px 5px $flat-button-shadow;
+                transition: all 1s ease-in-out;
+
+                p{
+                    color: $flat-button-text-hover;
+                    transition: all 1.2s ease-in-out;
+                }
+            }
+        }
+    }
+
+}
+
+h4.map-card-author{
+    text-align: right;
+}
+
+.contact-page{
+    .container{
+        .map-wrap{
+            
+                opacity: 0;
+                animation: fadeIn 1s 1.1s forwards;
+                min-height: 40vh;
+
+                color: $flat-button-text;
+                background-color: $flat-button-bg;
+                backdrop-filter: blur(6px);
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+                box-shadow: -5px -5px 20px $bg_white,  5px 5px 20px $flat-button-shadow;
+                border: 0;
+                outline: 0;
+                padding: 0px 0px;
+                transition: all 1s ease-in-out;
+
+                .leaflet-container{
+                    width: 100%;
+                    height: 39vh;
+                    border-bottom-left-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                    border-top-left-radius: 30px;
+                    border-top-right-radius: 30px;
+                }
+        }
+    }
+}
+
+.leaflet-bar{
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+    a {
+        background-color: $bg-black;
+        border-bottom: 1px solid $flat-button-bg;
+        color: $flat-button-text-hover;
+        transition: all 0.5s ease-in-out;
+    }
+    a:hover {
+        background-color: $flat-button-bg;
+        border-bottom: 1px solid $flat-button-bg;
+        color: $flat-button-text;
+        transition: all 0.5s ease-in-out;
+    }
+}
+.leaflet-touch .leaflet-bar a:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.leaflet-touch .leaflet-bar a:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+// swal container
+.swal-icon{
+    background: $bg-black;
+  }
+  
+  .swal-icon--success{
+    border-color: $primary-color;
+  }
+  
+  .swal-modal{
+    border-radius: 20px;
+    background-color: $flat-button-bg;
+    backdrop-filter: blur(6px);
+    .swal-icon--success:after, .swal-icon--success:before,
+    .swal-icon--success__hide-corners{
+        background-color: $flat-button-bg;
+    }
+    .swal-icon--success__ring{
+      border-color: $bg-black;
+    }
+    
+    .swal-button{
+      text-transform: uppercase;
+      font-weight: 800;
+    
+    }
+    .swal-button:focus{
+        box-shadow: -2px -2px 5px $bg_white, 2px 2px 5px $flat-button-shadow;
+    }
+    .swal-button:not([disabled]):hover{
+        background-color: transparent;
+    }
+    .swal-icon--success__line{
+        background-color: $bg-black;
+    }
+  }
+ 

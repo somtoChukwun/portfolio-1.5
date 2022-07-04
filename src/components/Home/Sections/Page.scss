@@ -1,0 +1,59 @@
+@import '../../../App.scss';
+@import '../../../index.scss';
+// $transp-white: rgba(255, 255, 255, 0.1);
+
+h1{
+    font-family: 'Orbitron';
+    font-size: 15em;
+    text-align: right;
+    color: $white-text;
+    
+}
+
+.page{
+    min-height: 25vh;
+    margin-left: 50px;
+    padding: 40px;
+    .page-inner{
+       padding-bottom: 50px;
+        p{
+        font-family: "Futura";
+        letter-spacing: 2px;
+        color: #fff;
+        animation: fadeInUp 1s backwards;
+          
+        }
+        .container{
+            flex-direction: column;
+            justify-content: center;
+            min-height: auto;
+            .row{
+                display: flex;
+                justify-content: space-between;
+                // display: grid;
+                // grid-template-columns: 1fr 1fr;
+                // grid-gap: 10px;
+                // align-items: center;
+                a{
+                    margin: 5px;
+                }
+                
+            }
+        }
+    }
+}
+
+.top-tags {
+    bottom: auto;
+    top: 35px;
+
+}
+
+.tags {
+    color: $primary-color;
+    opacity: 0.6;
+    
+    bottom: 0;
+    left: 12;
+    font-size: $desktop-text;
+}

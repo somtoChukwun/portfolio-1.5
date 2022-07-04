@@ -1,0 +1,149 @@
+@import '../../../App.scss';
+@import '../../../index.scss';
+// $transp-white: rgba(255, 255, 255, 0.1);
+
+
+.hero {
+    padding: 30px;
+
+    .container{
+        height: 60%;
+        justify-content: center;
+        
+    }
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex:1;
+    color: $light-text;
+
+    &.hero-content{
+        padding: 20px;
+    }
+
+    .column-two{
+        flex:1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      position: relative;
+        
+    }
+    .column-two img{
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.container .text-zone{
+    flex:0.8;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hero-content{
+    .text-zone{
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       
+       .heading-subtitle{
+           font-family: 'Orbitron';
+           font-size: $desktop-text;
+           letter-spacing: 2px;
+           color: $light-text;
+           animation: fadeIn 1s 0.5s backwards;
+           
+           
+       }
+       .upper-row{
+           flex: 1;
+           padding: 20px 0;
+       }
+
+       .lower-row{
+           display: flex;
+           align-items: flex-start;
+           flex: 1;
+           padding: 20px 0;
+       }
+       
+    }
+    h2{   
+        // img{
+        //     width:80px;
+        //     opacity:0;
+        //     height: auto;
+        //     animation: jackInTheBox 1s linear both;
+        //     animation-delay: 1.4s;
+        // }
+        
+    }
+    
+    
+}
+.wrap-logo{
+    display: flex;
+    align-items: flex-end;
+
+    .logo-container {
+        flex: 0.15;
+        svg{
+            position: relative;
+            width:100%;
+            height: 100%;
+            opacity:0;
+            animation: jackInTheBox 1s linear both;
+            animation-delay: 1.4s;
+        }
+        
+    }
+    span{
+        flex:1;
+    }
+}
+
+
+
+h1{
+    font-family: 'Orbitron';
+    font-size: 15em;
+    text-align: right;
+   
+}
+
+.hero{
+    width: calc(100% - 60px);
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    
+}
+.view-tags{
+    padding:10px;
+    padding-left: 30px;
+    padding-top: 50px;
+    width: 85%;
+    
+    .tags{
+        margin-left: 10px;
+        animation: fadeIn 1s 1.2s backwards;
+        
+    }
+}
+
+
+
+// background
+
+.hero{
+    background-image: 
+        linear-gradient(70deg, rgba(16, 16, 16, 0.93), rgba(16, 16, 16, 0.93)),
+        url("../../../assets/images/logo-src.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    }
